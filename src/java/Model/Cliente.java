@@ -16,6 +16,14 @@ public class Cliente {
     
     public Cliente() {}     
     
+    public Cliente(String primeiro_nome, String sobrenome, String email, String senha){
+        this.primeiro_nome = primeiro_nome;
+        this.sobrenome = sobrenome;
+        this.email = email;
+        this.senha = senha;
+    }
+    
+    /*
     public Cliente(String primeiro_nome, String sobrenome, String email, String senha,
             String cep, String cidade, Date data_nascimento, String cpf, String telefone) {
         this.primeiro_nome = primeiro_nome;
@@ -28,6 +36,7 @@ public class Cliente {
         this.cpf = cpf;
         this.telefone = telefone;
     }
+*/
 
     public String getPrimeiro_nome() {
         return primeiro_nome;

@@ -5,7 +5,9 @@
         <group>
             <file>file:/T:/DEV/PucPR/petshops/web/index.html</file>
             <file>file:/T:/DEV/PucPR/petshops/web/pages/pagina-registro-cliente.html</file>
-            <file>file:/T:/DEV/PucPR/petshops/web/pages/pagina-login.html</file>
+            <file>file:/T:/DEV/PucPR/petshops/src/java/DAO/Conexao.java</file>
+            <file>file:/T:/DEV/PucPR/petshops/src/java/DAO/ClienteDAO.java</file>
+            <file>file:/T:/DEV/PucPR/petshops/src/java/Controller/CadastroClienteController.java</file>
         </group>
     </open-files>
 </project-private>

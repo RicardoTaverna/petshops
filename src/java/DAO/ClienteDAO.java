@@ -15,11 +15,26 @@ public class ClienteDAO {
     public ClienteDAO() {
         conexao = new Conexao();
     }
+    
+    
+    public void cadastrarCliente(Cliente cliente){
+        try {
+            query = "INSERT INTO cliente(primeiro_nome,sobrenome,email,senha)"
+                    + "VALUES (" +"'"+ cliente.getPrimeiro_nome() + "'," + "'"+ 
+                    cliente.getSobrenome() + "',"
+                    + "'"+ cliente.getEmail() + "'," + cliente.getSenha() + ")";
 
+            statement = conexao.getConnection().prepareStatement(query);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
     public void inserirCliente(Cliente cliente){
         try {
-            query = "INSERT INTO cliente(primeiro_nome,sobrenome,email,senha,cep,cidade,data_nascimento,"
-                    + "cpftelefone) VALUES (" +"'"+ cliente.getPrimeiro_nome() + "'," + "'"+ 
+            query = "INSERT INTO cliente(primeiro_nome,sobrenome,email,senha,cep,cidade,data_nascimento,cpf,telefone)"
+                    + "VALUES (" +"'"+ cliente.getPrimeiro_nome() + "'," + "'"+ 
                     cliente.getSobrenome() + "',"
                     + "'"+ cliente.getEmail() + "'," + cliente.getSenha() + "'," + cliente.getCep() +"'," + 
                     cliente.getCidade() +
