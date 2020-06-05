@@ -30,6 +30,32 @@ public class ClienteDAO {
             e.printStackTrace();
         }
     }
+    public boolean autenticaCliente(String usuario, String senha){
+        boolean retorno = false;
+        try{
+            
+            query = ("SELECT * FROM cliente WHERE email = '"+usuario +"' "
+                    + "and senha = '"+senha+"'");
+            statement = conexao.getConnection().prepareStatement(query);
+            statement.executeQuery();
+            
+            ResultSet rs;
+            rs = statement.executeQuery();
+            
+            
+            if(rs.next()){
+                retorno = true;
+                
+            }else{
+                retorno = false;}
+            
+        
+            }catch (SQLException e) {
+                e.printStackTrace();
+            }
+        return retorno;
+        
+    }
 
     
     public void inserirCliente(Cliente cliente){
@@ -46,9 +72,11 @@ public class ClienteDAO {
 
             statement = conexao.getConnection().prepareStatement(query);
             statement.executeUpdate();
+            
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        
     }
 
     public ResultSet listarCliente(){
