@@ -16,13 +16,13 @@ public class ClienteDAO {
         conexao = new Conexao();
     }
     
-    
     public void cadastrarCliente(Cliente cliente){
         try {
-            query = "INSERT INTO cliente(primeiro_nome,sobrenome,email,senha)"
-                    + "VALUES (" +"'"+ cliente.getPrimeiro_nome() + "'," + "'"+ 
-                    cliente.getSobrenome() + "',"
-                    + "'"+ cliente.getEmail() + "'," + cliente.getSenha() + ")";
+            query = "INSERT INTO cliente(primeiro_nome,sobrenome,email,senha,cep,cidade,data_nascimento,cpf,telefone)"
+                    + "VALUES (" +"'"+ cliente.getPrimeiro_nome() + "',"  
+                    + "'" + cliente.getSobrenome() + "',"
+                    + "'" + cliente.getEmail() + "',"
+                    + "'" + cliente.getSenha() + "'," + ")";
 
             statement = conexao.getConnection().prepareStatement(query);
             statement.executeUpdate();
@@ -30,16 +30,19 @@ public class ClienteDAO {
             e.printStackTrace();
         }
     }
+
     
     public void inserirCliente(Cliente cliente){
         try {
-            query = "INSERT INTO cliente(primeiro_nome,sobrenome,email,senha,cep,cidade,data_nascimento,cpf,telefone)"
-                    + "VALUES (" +"'"+ cliente.getPrimeiro_nome() + "'," + "'"+ 
-                    cliente.getSobrenome() + "',"
-                    + "'"+ cliente.getEmail() + "'," + cliente.getSenha() + "'," + cliente.getCep() +"'," + 
-                    cliente.getCidade() +
-                    "'," + cliente.getData_nascimento() +
-                    "'," + cliente.getCpf() +"'," + cliente.getTelefone() + ")";
+            query = "INSERT INTO cliente(primeiro_nome,sobrenome,email,senha,cep,cidade,cpf,telefone)"
+                    + "VALUES (" +"'"+ cliente.getPrimeiro_nome() + "',"  
+                    + "'" + cliente.getSobrenome() + "',"
+                    + "'" + cliente.getEmail() + "',"
+                    + "'" + cliente.getSenha() + "',"
+                    + "'" + cliente.getCep() +"',"
+                    + "'" + cliente.getCidade() + "',"
+                    + "'" + cliente.getCpf() +"',"
+                    + "'" + cliente.getTelefone() + "')";
 
             statement = conexao.getConnection().prepareStatement(query);
             statement.executeUpdate();
@@ -65,7 +68,7 @@ public class ClienteDAO {
         try{
             query = "UPDATE cliente SET nome='" + u.getPrimeiro_nome() + "', sobrenome='" + u.getSobrenome() + "' "
                     + ", email='" + u.getEmail() + "' , senha='" + u.getSenha() + "' , cep='" + u.getCep() + "'"
-                    + ", cidade='" + u.getCidade() + "' , data_nascimento='" + u.getData_nascimento() + "', cpf='" + u.getCpf() + "'"
+                    + ", cidade='" + u.getCidade() + "', cpf='" + u.getCpf() + "'"
                     + ", Telefone='" + u.getTelefone() + "' " +
                     
                         "WHERE id = " + id;

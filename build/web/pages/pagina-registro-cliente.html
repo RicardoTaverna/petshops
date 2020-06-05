@@ -28,24 +28,24 @@
           </div>
           <div class="card-body">
             <h5 class="card-title text-center">Registrar</h5>
-            <form class="form-signin" method="POST" action="ClienteCadastroController">
+            <form class="form-signin" method="POST" action="/PetShops/CadastrarClienteController">
               <div class="form-label-group">
-                <input type="text" id="inputUsername" class="form-control" placeholder="Nome" required autofocus>
+                <input type="text" id="inputUsername" class="form-control" placeholder="Nome" required autofocus name="inputUsername">
                 <label for="inputUsername">Nome</label>
               </div>
                 
               <div class="form-label-group">
-                <input type="text" id="inputLastname" class="form-control" placeholder="Sobrenome" required>
+                <input type="text" id="inputLastname" class="form-control" placeholder="Sobrenome" name="inputLastname" required>
                 <label for="inputLastname">Sobrenome</label>
               </div>
 
               <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required>
+                <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" name="inputEmail" required>
                 <label for="inputEmail">E-mail</label>
               </div>
 
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Senha" name="inputPassword" required>
                 <label for="inputPassword">Senha</label>
               </div>
 
