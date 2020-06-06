@@ -28,7 +28,7 @@ public class LoginClienteController extends HttpServlet {
             
             }else{
                 session.invalidate();
-                 //request.getRequestDispatcher("/pages/pagina-login.html").forward(request, response);
+                request.getRequestDispatcher("/pages/pagina-login.html").forward(request, response);
             }
             
             
