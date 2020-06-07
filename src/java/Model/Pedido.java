@@ -4,44 +4,44 @@ import java.util.Date;
 
 
 public class Pedido {
-    private Cliente cliente;
-    private Fornecedor fornecerdor;
-    private Servicos servicos;
+    private int clienteId;
+    private int fornecerdorId;
+    private int servicosId;
     private Date data_pedido;
     private int quantidade;
     
     public Pedido(){}
 
-    public Pedido(Cliente cliente, Fornecedor fornecerdor, Servicos servicos, Date data_pedido, int quantidade) {
-        this.cliente = cliente;
-        this.fornecerdor = fornecerdor;
-        this.servicos = servicos;
+    public Pedido(int clienteId, int fornecerdorId, int servicosId, Date data_pedido, int quantidade) {
+        this.clienteId = clienteId;
+        this.fornecerdorId = fornecerdorId;
+        this.servicosId = servicosId;
         this.data_pedido = data_pedido;
         this.quantidade = quantidade;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public int getClienteId() {
+        return clienteId;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setClienteId(int clienteId) {
+        this.clienteId = clienteId;
     }
 
-    public Fornecedor getFornecerdor() {
-        return fornecerdor;
+    public int getFornecerdorId() {
+        return fornecerdorId;
     }
 
-    public void setFornecerdor(Fornecedor fornecerdor) {
-        this.fornecerdor = fornecerdor;
+    public void setFornecerdorId(int fornecerdorId) {
+        this.fornecerdorId = fornecerdorId;
     }
 
-    public Servicos getServicos() {
-        return servicos;
+    public int getServicosId() {
+        return servicosId;
     }
 
-    public void setServicos(Servicos servicos) {
-        this.servicos = servicos;
+    public void setServicosId(int servicosId) {
+        this.servicosId = servicosId;
     }
 
     public Date getData_pedido() {

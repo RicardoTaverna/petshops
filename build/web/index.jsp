@@ -1,5 +1,6 @@
 <%@page import="java.sql.ResultSet"%>
 <!DOCTYPE html>
+<% ResultSet usuario = (ResultSet)session.getAttribute("usuarioLogado"); %>
 <html lang="en">
     <head>
         <meta charset="utf-8">

@@ -45,7 +45,7 @@
                 <div class="row">
                     <!-- Detalhes do fornecedor -->
                     <%
-                    ResultSet fornecedor = (ResultSet)request.getAttribute("resultado");       
+                    ResultSet fornecedor = (ResultSet)session.getAttribute("usuarioLogado");       
                         while(fornecedor.next()){
 
                     %> 

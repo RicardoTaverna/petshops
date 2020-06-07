@@ -99,51 +99,32 @@
                     
                     <!-- Lista de Serviços -->
                     <div class="col-4">
+                        <%
+                        ResultSet servico = (ResultSet)request.getAttribute("resultadoServico");       
+                            while(servico.next()){
+
+                        %> 
                         <div class="card">
                             <div class="card-body">
-                              <h5 class="card-title">Serviço 1</h5>
-                              <p class="card-text">Descrição do serviço 1</p>
+                              <h5 class="card-title"><%out.print(servico.getString("nome"));%></h5>
+                              <p class="card-text"><%out.print(servico.getString("descricao"));%></p>
                             <hr>
                                 <div class="row">
-                                    <div class="col-6">
-                                        <p>valor R$ 12,20</p>
+                                    <div class="col-4">
+                                        <p>Tempo: <%out.print(servico.getString("tempo_servico"));%>min</p>
                                     </div>
-                                    <div class="col-6">
-                                        <a href="#" class="btn btn-primary">Adicionar</a>
+                                    <div class="col-4">
+                                        <p>valor <%out.print(servico.getString("preco"));%></p>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="#" class="btn btn-primary btn-sm">Adicionar</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-body">
-                              <h5 class="card-title">Serviço 2</h5>
-                              <p class="card-text">Descrição do serviço 2</p>
-                            <hr>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <p>valor R$ 12,20</p>
-                                    </div>
-                                    <div class="col-6">
-                                        <a href="#" class="btn btn-primary">Adicionar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                              <h5 class="card-title">Serviço 3</h5>
-                              <p class="card-text">Descrição do serviço 3</p>
-                            <hr>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <p>valor R$ 12,20</p>
-                                    </div>
-                                    <div class="col-6">
-                                        <a href="#" class="btn btn-primary">Adicionar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <%
+                          }
+                        %>
                     </div>
                     
                     <!-- Card Total -->
