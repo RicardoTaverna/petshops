@@ -23,7 +23,7 @@ public class LoginClienteController extends HttpServlet {
             ClienteDAO clientedao = new ClienteDAO();
             if(clientedao.autenticaCliente(usuario,senha)){
                 session.setAttribute("nome",usuario); 
-                request.getRequestDispatcher("/pages/dashboard.html").forward(request, response);
+                request.getRequestDispatcher("/pages/dashboard.jsp").forward(request, response);
                  
             
             }else{
