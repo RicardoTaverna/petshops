@@ -14,23 +14,17 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <% 
-            ResultSet resultSet = (ResultSet) request.getAttribute("resultado");
-            Cliente cliente = new Cliente();
-                
-
-                out.print( " | Nome: " + cliente.getEmail() +  "<br>");
-            
-            
-                
-            while(resultSet.next())
-            {
-                out.print("Nome2: " + resultSet.getString("email") + "<br>");
-            }
+        <%
+        ResultSet cliente = (ResultSet)request.getAttribute("resultado");       
+            //while(cliente.next()){
+        %> 
+        <%out.print(cliente.getString("primeiro_nome"));%>  <input type="text" name="tNome" size="10" /> <br>
+                <%
+        //}    
         %>
         <form method="POST" action="DashboardClienteController">
            
-            Nome2: <input type="text" name="tNome" size="10" /> <br>
+             <input type="text" name="tNome" size="10" /> <br>
             Nome <input type="text" name="tEmail" size="20" /> <br>
             
             <br>
@@ -38,6 +32,7 @@
             <input type="submit" value="Editar"/>
             
         </form>
+
         <h1>Hello World!</h1>
     </body>
 </html>
