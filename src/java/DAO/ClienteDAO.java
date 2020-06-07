@@ -111,12 +111,17 @@ public class ClienteDAO {
     
     public void editarCliente(int id, Cliente u){
         try{
-            query = "UPDATE cliente SET nome='" + u.getPrimeiro_nome() + "', sobrenome='" + u.getSobrenome() + "' "
-                    + ", email='" + u.getEmail() + "' , senha='" + u.getSenha() + "' , cep='" + u.getCep() + "'"
-                    + ", cidade='" + u.getCidade() + "', cpf='" + u.getCpf() + "'"
-                    + ", Telefone='" + u.getTelefone() + "' " +
+            query = "UPDATE cliente SET "
+                    + "primeiro_nome='" + u.getPrimeiro_nome() + "',"
+                    + "sobrenome='" + u.getSobrenome() + "',"
+                    + "email='" + u.getEmail()+ "',"
+                    + "senha='" + u.getSenha()+ "',"
+                    + "cep='" + u.getCep() + "',"
+                    + "cidade='" + u.getCidade() + "',"
+                    + "cpf='" + u.getCpf() + "',"
+                    + "telefone='" + u.getTelefone() + "'" +
                     
-                        "WHERE id = " + id;
+                        "WHERE clienteId = " + id;
         
             statement = conexao.getConnection().prepareStatement(query);
             statement.executeUpdate();
