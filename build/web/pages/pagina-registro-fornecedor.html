@@ -28,37 +28,37 @@
           </div>
           <div class="card-body">
             <h5 class="card-title text-center">Registrar Como Fornecedor</h5>
-            <form class="form-signin">
+            <form class="form-signin" action="/PetShops/CadastrarFornecedorController" method="POST">
               <div class="form-label-group">
-                <input type="text" id="inputUserame" class="form-control" placeholder="Nome Fantasia" required autofocus>
-                <label for="inputUserame">Nome Fantasia</label>
+                <input type="text" id="inputNome" name="inputNome" class="form-control" placeholder="Nome Fantasia" required autofocus>
+                <label for="inputNome">Nome Fantasia</label>
               </div>
 
               <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required>
+                <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="E-mail" required>
                 <label for="inputEmail">E-mail</label>
               </div>
                 
               <div class="form-label-group">
-                <input type="text" id="inputCnpj" class="form-control" placeholder="CNPJ" required>
+                <input type="text" id="inputTelefone" name="inputTelefone" class="form-control" placeholder="Telefone" required>
+                <label for="inputTelefone">Telefone</label>
+              </div>
+                
+              <div class="form-label-group">
+                <input type="text" id="inputCnpj" name="inputCnpj" class="form-control" placeholder="CNPJ" required>
                 <label for="inputCnpj">CNPJ</label>
               </div>
                 
               <div class="form-label-group">
-                <input type="text" id="inputCep" class="form-control" placeholder="CEP" required>
+                <input type="text" id="inputCep" name="inputCep" class="form-control" placeholder="CEP" required>
                 <label for="inputCep">CEP</label>
               </div>
               
               <hr>
 
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+                <input type="password" id="inputPassword" name="inputSenha" class="form-control" placeholder="Senha" required>
                 <label for="inputPassword">Senha</label>
-              </div>
-              
-              <div class="form-label-group">
-                <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirme a senha" required>
-                <label for="inputConfirmPassword">Confirme a senha</label>
               </div>
 
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Registrar</button>

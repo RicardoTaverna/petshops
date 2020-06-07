@@ -22,7 +22,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">CONTATO</a>
                         </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/PetShops/pages/area-fornecedor.html">√ÅREA DO FORNECEDOR</a>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/PetShops/pages/area-fornecedor.html">¡REA DO FORNECEDOR</a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/PetShops/pages/pagina-login.html">CLIENTE</a>
                         </li>
@@ -40,7 +40,7 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="pre-wrap masthead-subheading font-weight-light mb-0">Os melhores petshop's reunidos em um √∫nico lugar! </p>
+                <p class="pre-wrap masthead-subheading font-weight-light mb-0">Os melhores petshop's reunidos em um ˙nico lugar! </p>
             </div>
         </header>
         
@@ -54,7 +54,7 @@
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
                 </div>
-                <!-- Portfolio Grid Items-->
+                <!-- Fornecedor Grid Items-->
                 <div class="row justify-content-center">
                     <!-- Portfolio Items-->
                     <div class="col-md-6 col-lg-4 mb-5">
@@ -71,41 +71,8 @@
                                 </div>
                               </div>
                             </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="card mb-3" style="max-width: 540px;">
-                            <div class="row no-gutters">
-                              <div class="col-md-4">
-                                <img src="..." class="card-img" alt="...">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="card mb-3" style="max-width: 540px;">
-                            <div class="row no-gutters">
-                              <div class="col-md-4">
-                                <img src="..." class="card-img" alt="...">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                </div>
-                              </div>
-                            </div>
-                         </div>
-                    </div>
-                    
+                        </div>
+                    </div>                    
                 </div>
             </div>
         </section>
@@ -181,7 +148,7 @@
         </footer>
         <!-- Copyright Section-->
         <section class="copyright py-4 text-center text-white">
-            <div class="container"><small class="pre-wrap">Copyright ¬© Your Website 2020</small></div>
+            <div class="container"><small class="pre-wrap">Copyright © Your Website 2020</small></div>
         </section>
         <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
         <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>

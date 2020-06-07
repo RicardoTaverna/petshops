@@ -5,25 +5,25 @@ import java.util.Date;
 
 public class Fornecedor {
     private String nome_fantasia;
-    private Date data_criacao;
     private String cnpj;
     private String cep;
     private String cidade;
     private String horario_funcionamento;
     private String email;
     private String telefone;
+    private String senha;
 
     public Fornecedor(){}
 
-    public Fornecedor(String nome_fantasia, Date data_criacao, String cnpj, String cep, String cidade, String horario_funcionamento, String email, String telefone) {
+    public Fornecedor(String nome_fantasia, String cnpj, String cep, String cidade, String horario_funcionamento, String email, String telefone, String senha) {
         this.nome_fantasia = nome_fantasia;
-        this.data_criacao = data_criacao;
         this.cnpj = cnpj;
         this.cep = cep;
         this.cidade = cidade;
         this.horario_funcionamento = horario_funcionamento;
         this.email = email;
         this.telefone = telefone;
+        this.senha = senha;
     }
 
     public String getNome_fantasia() {
@@ -32,14 +32,6 @@ public class Fornecedor {
 
     public void setNome_fantasia(String nome_fantasia) {
         this.nome_fantasia = nome_fantasia;
-    }
-
-    public Date getData_criacao() {
-        return data_criacao;
-    }
-
-    public void setData_criacao(Date data_criacao) {
-        this.data_criacao = data_criacao;
     }
 
     public String getCnpj() {
@@ -89,6 +81,16 @@ public class Fornecedor {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+    
+    
     
     
 }

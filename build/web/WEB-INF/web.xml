@@ -4,9 +4,25 @@
         <servlet-name>CadastrarClienteController</servlet-name>
         <servlet-class>Controller.CadastrarClienteController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CadastrarFornecedorController</servlet-name>
+        <servlet-class>Controller.CadastrarFornecedorController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListarFornecedorIndexController</servlet-name>
+        <servlet-class>Controller.ListarFornecedorIndexController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarClienteController</servlet-name>
         <url-pattern>/CadastrarClienteController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastrarFornecedorController</servlet-name>
+        <url-pattern>/CadastrarFornecedorController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarFornecedorIndexController</servlet-name>
+        <url-pattern>/ListarFornecedorIndexController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
