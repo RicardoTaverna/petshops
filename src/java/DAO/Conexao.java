@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class Conexao {
 
     private Connection conn;
-    private String banco = "jdbc:mysql://127.0.0.1/petshop?useSSL=false";
+    private String banco = "jdbc:mysql://127.0.0.1:3306/petshop?useSSL=false";
     public Conexao (){
     
         try {
