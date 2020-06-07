@@ -58,13 +58,14 @@
                 <!-- Fornecedor Grid Items-->
                 <div class="row justify-content-center">
                     <!-- Portfolio Items-->
+                    
+                    <%
+                        ResultSet fornecedor = (ResultSet)request.getAttribute("resultado");                        
+
+                        while(fornecedor.next()){
+
+                    %> 
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <%
-                            ResultSet fornecedor = (ResultSet)request.getAttribute("resultado");                        
-                       
-                            while(fornecedor.next()){
-                                
-                        %> 
                         <div class="card mb-3" style="max-width: 540px;">
                             <div class="row no-gutters">
                               <div class="col-md-4">
@@ -72,15 +73,18 @@
                               </div>
                               <div class="col-md-8">
                                 <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    <h5 class="card-title"><%out.print(fornecedor.getString("nome_fantasia") );   %></h5>
+                                  <p class="card-text">Cidade: <%out.print(fornecedor.getString("cidade") );%></p>
+                                  <p class="card-text">Horario de Funcionamento: <%out.print(fornecedor.getString("cidade") );%></p>
+                                  <p class="card-text"><small class="text-muted">Email: <%out.print(fornecedor.getString("email") );%></small></p>
+                                  <p class="card-text"><small class="text-muted">Telefone: <%out.print(fornecedor.getString("telefone") );%></small></p>
+
                                 </div>
                               </div>
                             </div>
                         </div>
-                        <% } %>
-                    </div>                    
+                    </div>       
+                    <% } %>
                 </div>
             </div>
         </section>
