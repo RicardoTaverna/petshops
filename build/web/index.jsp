@@ -1,3 +1,4 @@
+<%@page import="java.sql.ResultSet"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,6 +59,12 @@
                 <div class="row justify-content-center">
                     <!-- Portfolio Items-->
                     <div class="col-md-6 col-lg-4 mb-5">
+                        <%
+                            ResultSet fornecedor = (ResultSet)request.getAttribute("resultado");                        
+                       
+                            while(fornecedor.next()){
+                                
+                        %> 
                         <div class="card mb-3" style="max-width: 540px;">
                             <div class="row no-gutters">
                               <div class="col-md-4">
@@ -72,6 +79,7 @@
                               </div>
                             </div>
                         </div>
+                        <% } %>
                     </div>                    
                 </div>
             </div>

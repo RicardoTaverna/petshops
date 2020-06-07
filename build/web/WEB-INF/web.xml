@@ -5,42 +5,40 @@
         <servlet-class>Controller.CadastrarClienteController</servlet-class>
     </servlet>
     <servlet>
-<<<<<<< HEAD
         <servlet-name>CadastrarFornecedorController</servlet-name>
         <servlet-class>Controller.CadastrarFornecedorController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ListarFornecedorIndexController</servlet-name>
         <servlet-class>Controller.ListarFornecedorIndexController</servlet-class>
-=======
+    </servlet>
+    <servlet>
         <servlet-name>LoginClienteController</servlet-name>
         <servlet-class>Controller.LoginClienteController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>dashboard</servlet-name>
         <servlet-class>Controller.DashboardClienteController</servlet-class>
->>>>>>> 1afc7522d778d559abe2d2395f83b49b0a86a48a
     </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarClienteController</servlet-name>
         <url-pattern>/CadastrarClienteController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-<<<<<<< HEAD
         <servlet-name>CadastrarFornecedorController</servlet-name>
         <url-pattern>/CadastrarFornecedorController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ListarFornecedorIndexController</servlet-name>
         <url-pattern>/ListarFornecedorIndexController</url-pattern>
-=======
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>LoginClienteController</servlet-name>
         <url-pattern>/LoginClienteController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>dashboard</servlet-name>
         <url-pattern>/dashboard</url-pattern>
->>>>>>> 1afc7522d778d559abe2d2395f83b49b0a86a48a
     </servlet-mapping>
     <session-config>
         <session-timeout>
