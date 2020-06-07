@@ -57,25 +57,23 @@ public class ClienteDAO {
         
     }
 
-    public void perfilDashCliente(Cliente cliente){
+    public ResultSet perfilDashCliente(ResultSet rs,Cliente cliente){
         try{
             query = ("SELECT * FROM cliente WHERE email = '"+cliente.getEmail() +"' "
                     + "and senha = '"+cliente.getSenha()+"'");
             statement = conexao.getConnection().prepareStatement(query);
             statement.executeQuery();
             
-            ResultSet rs;
+            
             rs = statement.executeQuery();
-            statement = conexao.getConnection().prepareStatement(query);
-            statement.executeUpdate();
-        
+ 
         
         }catch (SQLException e) {
             e.printStackTrace();
         }
     
     
-    
+        return rs;
     }
     
     public void inserirCliente(Cliente cliente){

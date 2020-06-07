@@ -24,7 +24,11 @@ public class DashboardClienteController extends HttpServlet {
                 Cliente u = new Cliente("", "",email,senha,"","","","");
                 
                 ClienteDAO udao = new ClienteDAO();
-                udao.perfilDashCliente(u);
+                ResultSet rs = null,rss;
+                udao.perfilDashCliente(rs,u);
+                
+                request.setAttribute("resultado", rs);
+                
                
         
         
