@@ -19,9 +19,10 @@ public class ServicosDAO {
     public void inserirServicos(Servicos servicos){
         try {
             query = "INSERT INTO servicos(nome,preco,descricao,tempo_servico) "
-                    + "VALUES (" +"'"+ servicos.getNome() + "'," + "'"+ 
-                    servicos.getPreco()+ servicos.getDescricao() + "'," + "'"+
-                    servicos.getTempo_servico() +")";
+                    + "VALUES (" +"'"+ servicos.getNome() + "'," +  
+                    servicos.getPreco()+ "," +
+                    "'" + servicos.getDescricao() + "'," + 
+                    "'" + servicos.getTempo_servico() + "')";
 
             statement = conexao.getConnection().prepareStatement(query);
             statement.executeUpdate();
@@ -30,9 +31,9 @@ public class ServicosDAO {
         }
     }
 
-    public ResultSet listarServicos(){
+    public ResultSet listarServicos(int id){
         try {
-            query = "SELECT * FROM servicos";
+            query = "SELECT * FROM servicos WHERE fornecedorId = " + id;
             statement = conexao.getConnection().prepareStatement(query);
             statement.executeQuery();
             resultSet = statement.executeQuery();

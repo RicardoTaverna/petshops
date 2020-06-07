@@ -27,8 +27,7 @@ public class LoginClienteController extends HttpServlet {
             
             
             if(clientedao.autenticaCliente(email,senha)){
-                session.setAttribute("nome",email);
-                request.setAttribute("resultado", resultado);
+                session.setAttribute("usuarioLogado", resultado);
                 request.getRequestDispatcher("/pages/dashboard.jsp").forward(request, response);
                  
             
@@ -36,12 +35,7 @@ public class LoginClienteController extends HttpServlet {
                 session.invalidate();
                 request.getRequestDispatcher("/pagina-login.html").forward(request, response);
             }
-            
-            
-            
        
     }
-
-    
 
 }

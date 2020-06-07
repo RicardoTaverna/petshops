@@ -45,8 +45,10 @@
                 <div class="row">
                     <!-- Detalhes do fornecedor -->
                     <%
+
                     ResultSet cliente = (ResultSet)session.getAttribute("usuarioLogado");       
                         while(cliente.next()){
+
 
                     %> 
                     

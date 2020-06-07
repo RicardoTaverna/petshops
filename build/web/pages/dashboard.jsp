@@ -47,7 +47,6 @@
                     <%
                     ResultSet cliente = (ResultSet)session.getAttribute("usuarioLogado");       
                         while(cliente.next()){
-
                     %> 
                     
                     <div class="col-8 jumbotron">
