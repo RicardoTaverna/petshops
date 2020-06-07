@@ -51,7 +51,7 @@
                     %> 
                     
                     <div class="col-8 jumbotron">
-                        <form method="POST", action="">
+                        <form method="POST" action="">
                             <input name="inputNome" value="<%out.print(fornecedor.getString("primeiro_nome"));%>" >
                             
                             <button type="submit" class="btn btn-primary">Atualizar</button>
