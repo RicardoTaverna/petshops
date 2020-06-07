@@ -44,9 +44,8 @@
                 <div class="row">
                     <!-- Detalhes do fornecedor -->
                     <%
-                        ResultSet fornecedor = (ResultSet)request.getAttribute("resultado");                        
-
-                        while(fornecedor.first()){
+                    ResultSet fornecedor = (ResultSet)request.getAttribute("resultado");       
+                        while(fornecedor.next()){
 
                     %> 
                     
@@ -62,7 +61,10 @@
                     
                     </div>
                     
-                    <% } %>
+                    <%
+                        }
+                    %>
+                    
                     
                     <!-- Lista de Serviços -->
                     <div class="col-4">

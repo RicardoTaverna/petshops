@@ -83,7 +83,7 @@ public class FornecedorDAO {
     
     public ResultSet listarUmFornecedor(int id){
         try {
-            query = "SELECT * FROM fornecedor WHERE fornecedorid = " + id;
+            query = "SELECT * FROM fornecedor WHERE fornecedorId = " + id;
             statement = conexao.getConnection().prepareStatement(query);
             statement.executeQuery();
             resultSet = statement.executeQuery();
