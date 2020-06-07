@@ -20,6 +20,10 @@
         <servlet-name>dashboard</servlet-name>
         <servlet-class>Controller.DashboardClienteController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ListarUmFornecedorController</servlet-name>
+        <servlet-class>Controller.ListarUmFornecedorController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarClienteController</servlet-name>
         <url-pattern>/CadastrarClienteController</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>dashboard</servlet-name>
         <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarUmFornecedorController</servlet-name>
+        <url-pattern>/ListarUmFornecedorController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

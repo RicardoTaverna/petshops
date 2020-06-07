@@ -70,12 +70,16 @@
                             <div class="row no-gutters">
                               <div class="col-md-4 my-auto mx-auto">
                                 <img src="imagens/pet-shop-logo.png" class="card-img" alt="...">
-                                <button class="btn btn-secondary btn-sm mx-2 mt-3 text-white">Conhecer</button>
+                                <form method="POST" action="ListarUmFornecedorController">
+                                    <input hidden name="id" value="<%out.print(fornecedor.getString("fornecedorId"));%>" />
+                                    <button type="submit" class="btn btn-secondary btn-sm mx-2 mt-3 text-white">Conhecer</button>
+                                </form>
+                                
                               </div>
                               <div class="col-md-8 bg-light">
                                 <div class="card-body">
-                                    <h5 class="card-title"><%out.print(fornecedor.getString("nome_fantasia") );   %></h5>
-                                  <p class="card-text">Cidade: <%out.print(fornecedor.getString("cidade") );%></p>
+                                    <h5 class="card-title"><%out.print(fornecedor.getString("nome_fantasia"));%></h5>
+                                  <p class="card-text">Cidade: <%out.print(fornecedor.getString("cidade"));%></p>
                                   <p class="card-text">Horario de Funcionamento: <%out.print(fornecedor.getString("cidade") );%></p>
                                   <p class="card-text"><small class="text-muted">Email: <%out.print(fornecedor.getString("email") );%></small></p>
                                   <p class="card-text"><small class="text-muted">Telefone: <%out.print(fornecedor.getString("telefone") );%></small></p>

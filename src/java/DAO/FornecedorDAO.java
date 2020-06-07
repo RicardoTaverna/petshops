@@ -80,4 +80,19 @@ public class FornecedorDAO {
             e.printStackTrace();
         }
     }
+    
+    public ResultSet listarUmFornecedor(int id){
+        try {
+            query = "SELECT * FROM fornecedor WHERE fornecedorid = " + id;
+            statement = conexao.getConnection().prepareStatement(query);
+            statement.executeQuery();
+            resultSet = statement.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return resultSet;
+    }
+    
+    
 }
