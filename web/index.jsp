@@ -68,10 +68,11 @@
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="card mb-3" style="max-width: 540px;">
                             <div class="row no-gutters">
-                              <div class="col-md-4">
-                                <img src="..." class="card-img" alt="...">
+                              <div class="col-md-4 my-auto mx-auto">
+                                <img src="imagens/pet-shop-logo.png" class="card-img" alt="...">
+                                <button class="btn btn-secondary btn-sm mx-2 mt-3 text-white">Conhecer</button>
                               </div>
-                              <div class="col-md-8">
+                              <div class="col-md-8 bg-light">
                                 <div class="card-body">
                                     <h5 class="card-title"><%out.print(fornecedor.getString("nome_fantasia") );   %></h5>
                                   <p class="card-text">Cidade: <%out.print(fornecedor.getString("cidade") );%></p>
