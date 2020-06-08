@@ -31,6 +31,7 @@ public class DeletarServicoController extends HttpServlet {
         
         ServicosDAO servicosDAO = new ServicosDAO();
         servicosDAO.deletarServicos(servicoId);
+        
         resultadoServico = servicosDAO.listarServicos(fornecedorId);
         
         FornecedorDAO fornecedorDAO = new FornecedorDAO();
