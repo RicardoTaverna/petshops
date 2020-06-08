@@ -128,7 +128,9 @@
                                 <td><%out.print(servico.getString("preco"));%></td>
                                 <td>
                                     <div class="row">
-                                        <form class="ml-3">
+                                        <form class="ml-3" method="POST" action="PaginaEditarServicoController">
+                                            <input hidden name="fornecedorId" value="<%out.print(fornecedorId);%>" />
+                                            <input hidden name="servicoId" value="<%out.print(servico.getString("servicosId"));%>" />
                                             <button class="btn btn-primary btn-sm" type="submit"><i class="far fa-edit"></i></button>
                                         </form>
                                         <form class="ml-3" method="POST" action="DeletarServicoController">

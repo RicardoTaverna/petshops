@@ -44,6 +44,22 @@
         <servlet-name>DeletarServicoController</servlet-name>
         <servlet-class>Controller.DeletarServicoController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EditarServicoController</servlet-name>
+        <servlet-class>Controller.EditarServicoController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PaginaEditarServicoController</servlet-name>
+        <servlet-class>Controller.PaginaEditarServicoController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditarServicoC</servlet-name>
+        <servlet-class>Controller.EditarServicoC</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PEditarServico</servlet-name>
+        <servlet-class>Controller.PEditarServico</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarClienteController</servlet-name>
         <url-pattern>/CadastrarClienteController</url-pattern>
@@ -87,6 +103,22 @@
     <servlet-mapping>
         <servlet-name>DeletarServicoController</servlet-name>
         <url-pattern>/DeletarServicoController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditarServicoController</servlet-name>
+        <url-pattern>/EditarServicoController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PaginaEditarServicoController</servlet-name>
+        <url-pattern>/PaginaEditarServicoController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditarServicoC</servlet-name>
+        <url-pattern>/EditarServicoC</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PEditarServico</servlet-name>
+        <url-pattern>/PEditarServico</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
