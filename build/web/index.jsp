@@ -26,7 +26,13 @@
                         </li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/PetShops/pages/area-fornecedor.html">ÁREA DO FORNECEDOR</a>
                         </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/PetShops/pages/pagina-login.html">CLIENTE</a>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <% if(usuario != null){ %>
+                                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="LoginClienteController">DASHBOARD</a>
+                            <%}else {%>
+                                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/PetShops/pages/pagina-login.html">LOGIN</a>
+                            <% } %>
+                            
                         </li>
                     </ul>
                 </div>
@@ -61,8 +67,7 @@
                     <!-- Portfolio Items-->
                     
                     <%
-                        ResultSet fornecedor = (ResultSet)request.getAttribute("resultado");                        
-
+                        ResultSet fornecedor = (ResultSet)request.getAttribute("resultado");   
                         while(fornecedor.next()){
 
                     %> 
@@ -73,7 +78,9 @@
                                 <img src="imagens/pet-shop-logo.png" class="card-img" alt="...">
                                 <form method="POST" action="ListarUmFornecedorController">
                                     <input hidden name="id" value="<%out.print(fornecedor.getString("fornecedorId"));%>" />
+                                    <% if(usuario != null){ %>
                                     <button type="submit" class="btn btn-secondary btn-sm mx-2 mt-3 text-white">Conhecer</button>
+                                    <%}%>
                                 </form>
                                 
                               </div>
