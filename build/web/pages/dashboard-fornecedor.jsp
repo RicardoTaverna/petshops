@@ -117,6 +117,7 @@
                             <%
                             ResultSet servico = (ResultSet)request.getAttribute("resultadoServico");       
                                 while(servico.next()){
+                                    fornecedorId = servico.getString("fornecedorId");
 
                             %>
                             <tbody>
@@ -130,7 +131,9 @@
                                         <form class="ml-3">
                                             <button class="btn btn-primary btn-sm" type="submit"><i class="far fa-edit"></i></button>
                                         </form>
-                                        <form class="ml-3">
+                                        <form class="ml-3" method="POST" action="DeletarServicoController">
+                                            <input hidden name="fornecedorId" value="<%out.print(fornecedorId);%>" />
+                                            <input hidden name="servicoId" value="<%out.print(servico.getString("servicosId"));%>" />
                                             <button class="btn btn-danger btn-sm" type="submit"><i class="fas fa-minus"></i></button>
                                         </form>
                                     </div>
@@ -142,7 +145,7 @@
                             <%%>
                             
                             <%
-                                fornecedorId = servico.getString("fornecedorId");
+                                
                                }
                             %>
                         </table>

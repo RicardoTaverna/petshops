@@ -64,7 +64,7 @@ public class ServicosDAO {
     
     public void deletarServicos(int id){
         try{
-            query = "DELETE FROM servicos WHERE id = " + id;
+            query = "DELETE FROM servicos WHERE servicosId = " + id;
         
             statement = conexao.getConnection().prepareStatement(query);
             statement.executeUpdate();

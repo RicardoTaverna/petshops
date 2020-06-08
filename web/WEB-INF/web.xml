@@ -40,6 +40,10 @@
         <servlet-name>PaginaAdicionarServicoController</servlet-name>
         <servlet-class>Controller.PaginaAdicionarServicoController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeletarServicoController</servlet-name>
+        <servlet-class>Controller.DeletarServicoController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarClienteController</servlet-name>
         <url-pattern>/CadastrarClienteController</url-pattern>
@@ -79,6 +83,10 @@
     <servlet-mapping>
         <servlet-name>PaginaAdicionarServicoController</servlet-name>
         <url-pattern>/PaginaAdicionarServicoController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeletarServicoController</servlet-name>
+        <url-pattern>/DeletarServicoController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
