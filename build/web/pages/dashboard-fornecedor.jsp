@@ -46,39 +46,39 @@
                     <!-- Detalhes do fornecedor -->
                     <%
 
-                    ResultSet cliente = (ResultSet)session.getAttribute("usuarioLogado");       
-                        while(cliente.next()){
+                    ResultSet fornecedor = (ResultSet)session.getAttribute("usuarioLogado");       
+                        while(fornecedor.next()){
 
 
                     %> 
                     
                     <div class="col-8 jumbotron">
-                        <form method="POST" action="AtualizarClienteController">
-                           <input hidden name="id" value="<%out.print(cliente.getString("clienteId"));%>">
+                        <form method="POST" action="AtualizarFornecedorController">
+                           <input hidden name="id" value="<%out.print(fornecedor.getString("fornecedorId"));%>">
                            
                             <div class="form-label-group">
-                                <input type="txt" id="inputNome" name="inputNome" class="form-control" placeholder="Nome" required value="<%out.print(cliente.getString("primeiro_nome"));%>">
+                                <input type="text" id="inputNome" name="inputNomeFantasia" class="form-control" placeholder="Nome Fantasia" required value="<%out.print(fornecedor.getString("nome_fantasia"));%>">
                             </div>
                             <div class="form-label-group">
-                                <input type="txt" id="inputSobrenome" name="inputSobrenome" class="form-control" placeholder="Sobrenome" required value="<%out.print(cliente.getString("sobrenome"));%>">
+                                <input type="text" id="inputSobrenome" name="inputCnpj" class="form-control" placeholder="CNPJ" required value="<%out.print(fornecedor.getString("cnpj"));%>">
                             </div>                            
                             <div class="form-label-group">
-                                <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email"  required value="<%out.print(cliente.getString("email"));%>">
+                                <input type="text" id="inputEmail" name="inputCep" class="form-control" placeholder="CEP"  required value="<%out.print(fornecedor.getString("cep"));%>">
                             </div>                            
                             <div class="form-label-group">
-                                <input type="password" id="inputSenha" name="inputSenha" class="form-control" placeholder="Senha" required value="<%out.print(cliente.getString("senha"));%>">
+                                <input type="text" id="inputSenha" name="inputCidade" class="form-control" placeholder="Cidade" required value="<%out.print(fornecedor.getString("cidade"));%>">
                             </div>
                             <div class="form-label-group">
-                                <input type="txt" id="inputCep" name="inputCep" class="form-control" placeholder="CEP" required value="<%out.print(cliente.getString("cep"));%>">
+                                <input type="text" id="inputCep" name="inputHorario" class="form-control" placeholder="Horario-Funcionamento" required value="<%out.print(fornecedor.getString("horario_funcionamento"));%>">
                             </div>                            
                             <div class="form-label-group">
-                                <input type="txt" id="inputCidade" name="inputCidade" class="form-control" placeholder="Cidade" required value="<%out.print(cliente.getString("cidade"));%>">
+                                <input type="email" id="inputCidade" name="inputEmail" class="form-control" placeholder="Email" required value="<%out.print(fornecedor.getString("email"));%>">
                             </div>
                             <div class="form-label-group">
-                                <input type="txt" id="inputCpf" name="inputCpf" class="form-control" placeholder="CPF" required value="<%out.print(cliente.getString("cpf"));%>">
+                                <input type="text" id="inputCpf" name="inputTelefone" class="form-control" placeholder="Telefone" required value="<%out.print(fornecedor.getString("telefone"));%>">
                             </div>
                             <div class="form-label-group">
-                                <input type="txt" id="inputTelefone" name="inputTelefone" class="form-control" placeholder="Telefone" required value="<%out.print(cliente.getString("telefone"));%>">
+                                <input type="password" id="inputTelefone" name="inputSenha" class="form-control" placeholder="Senha" required value="<%out.print(fornecedor.getString("senha"));%>">
                             </div>
 
 

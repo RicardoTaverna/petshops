@@ -3,13 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Stengrat/Desktop/petshop/petshops/web/pages/fornecedor.jsp</file>
-            <file>file:/C:/Users/Stengrat/Desktop/petshop/petshops/src/java/DAO/ClienteDAO.java</file>
+            <file>file:/C:/Users/Stengrat/Desktop/petshop/petshops/src/java/Controller/CadastrarClienteController.java</file>
+            <file>file:/C:/Users/Stengrat/Desktop/petshop/petshops/web/pages/pagina-login-fornecedor.html</file>
             <file>file:/C:/Users/Stengrat/Desktop/petshop/petshops/src/java/Controller/LoginClienteController.java</file>
-            <file>file:/C:/Users/Stengrat/Desktop/petshop/petshops/src/java/Controller/ListarUmFornecedorController.java</file>
-            <file>file:/C:/Users/Stengrat/Desktop/petshop/petshops/src/java/Controller/CadastrarFornecedorController.java</file>
+            <file>file:/C:/Users/Stengrat/Desktop/petshop/petshops/web/pages/fornecedor.jsp</file>
+            <file>file:/C:/Users/Stengrat/Desktop/petshop/petshops/src/java/Controller/AtualizarClienteController.java</file>
+            <file>file:/C:/Users/Stengrat/Desktop/petshop/petshops/src/java/DAO/ClienteDAO.java</file>
+            <file>file:/C:/Users/Stengrat/Desktop/petshop/petshops/src/java/Controller/AtualizarFornecedorController.java</file>
             <file>file:/C:/Users/Stengrat/Desktop/petshop/petshops/web/pages/dashboard.jsp</file>
+            <file>file:/C:/Users/Stengrat/Desktop/petshop/petshops/src/java/Controller/ListarUmFornecedorController.java</file>
+            <file>file:/C:/Users/Stengrat/Desktop/petshop/petshops/src/java/Controller/LoginFornecedorController.java</file>
+            <file>file:/C:/Users/Stengrat/Desktop/petshop/petshops/src/java/DAO/FornecedorDAO.java</file>
             <file>file:/C:/Users/Stengrat/Desktop/petshop/petshops/web/pages/pagina-login.html</file>
+            <file>file:/C:/Users/Stengrat/Desktop/petshop/petshops/src/java/Controller/CadastrarFornecedorController.java</file>
+            <file>file:/C:/Users/Stengrat/Desktop/petshop/petshops/web/pages/dashboard-fornecedor.jsp</file>
         </group>
     </open-files>
 </project-private>
