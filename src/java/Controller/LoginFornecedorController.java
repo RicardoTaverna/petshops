@@ -52,7 +52,7 @@ public class LoginFornecedorController extends HttpServlet {
                  
         }else{
             session.invalidate();
-            request.getRequestDispatcher("/pagina-login.html").forward(request, response);
+            response.sendRedirect("/PetShops/pages/pagina-login-fornecedor.html");
         }
     }
 
