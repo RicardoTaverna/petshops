@@ -42,7 +42,7 @@
         
         <header class="masthead bg-white" style="margin-top: -75px;">
             <div class="container">
-                <div class="row">
+                
                     <!-- Detalhes do fornecedor -->
                     <%
 
@@ -52,47 +52,77 @@
 
                     %> 
                     
-                    <div class="col-8 jumbotron">
-                        <form method="POST" action="AtualizarFornecedorController">
-                           <input hidden name="id" value="<%out.print(fornecedor.getString("fornecedorId"));%>">
-                           
-                            <div class="form-label-group">
+                <div class="jumbotron">
+                    <h3 class="mb-3" >Dados Cadastrais</h3>
+                    <form method="POST" action="AtualizarFornecedorController">
+                       <input hidden name="id" value="<%out.print(fornecedor.getString("fornecedorId"));%>">
+                       <div class="row">
+                            
+                            <div class="col-6 form-label-group mb-3">
                                 <input type="text" id="inputNome" name="inputNomeFantasia" class="form-control" placeholder="Nome Fantasia" required value="<%out.print(fornecedor.getString("nome_fantasia"));%>">
-                            </div>
-                            <div class="form-label-group">
+                            </div>   
+                            <div class="col-6 form-label-group mb-3">
                                 <input type="text" id="inputSobrenome" name="inputCnpj" class="form-control" placeholder="CNPJ" required value="<%out.print(fornecedor.getString("cnpj"));%>">
-                            </div>                            
-                            <div class="form-label-group">
+                            </div>  
+                            <div class="col-6 form-label-group mb-3">
                                 <input type="text" id="inputEmail" name="inputCep" class="form-control" placeholder="CEP"  required value="<%out.print(fornecedor.getString("cep"));%>">
                             </div>                            
-                            <div class="form-label-group">
+                            <div class="col-6 form-label-group mb-3">
                                 <input type="text" id="inputSenha" name="inputCidade" class="form-control" placeholder="Cidade" required value="<%out.print(fornecedor.getString("cidade"));%>">
                             </div>
-                            <div class="form-label-group">
+                            <div class="col-6 form-label-group mb-3">
                                 <input type="text" id="inputCep" name="inputHorario" class="form-control" placeholder="Horario-Funcionamento" required value="<%out.print(fornecedor.getString("horario_funcionamento"));%>">
                             </div>                            
-                            <div class="form-label-group">
+                            <div class="col-6 form-label-group mb-3">
                                 <input type="email" id="inputCidade" name="inputEmail" class="form-control" placeholder="Email" required value="<%out.print(fornecedor.getString("email"));%>">
                             </div>
-                            <div class="form-label-group">
+                            <div class="col-6 form-label-group mb-3">
                                 <input type="text" id="inputCpf" name="inputTelefone" class="form-control" placeholder="Telefone" required value="<%out.print(fornecedor.getString("telefone"));%>">
                             </div>
-                            <div class="form-label-group">
+                            <div class="col-6 form-label-group mb-3">
                                 <input type="password" id="inputTelefone" name="inputSenha" class="form-control" placeholder="Senha" required value="<%out.print(fornecedor.getString("senha"));%>">
                             </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Atualizar</button>
+                    </form>
+                </div>
+                    
+                <%
+                    }
+                %>
+                
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Serviços</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Serviços Cadastrados</h6>
+                      <table class="table table-hover">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Descrição</th>
+                                <th scope="col">Tempo</th>
+                                <th scope="col">Preço</th>
+                              </tr>
+                            </thead>
+                            <%
+                            ResultSet servico = (ResultSet)request.getAttribute("resultadoServico");       
+                                while(servico.next()){
 
-
-                            <button type="submit" class="btn btn-primary">Atualizar</button>
-                        </form>
-                    </div>
-                    
-                    <%
-                        }
-                    %>
-                    
-                    
-                    
-                        
+                            %>
+                            <tbody>
+                              <tr>
+                                <td><%out.print(servico.getString("nome"));%></td>
+                                <td><%out.print(servico.getString("descricao"));%></td>
+                                <td><%out.print(servico.getString("tempo_servico"));%></td>
+                                <td><%out.print(servico.getString("preco"));%></td>
+                              </tr>
+                              
+                            </tbody>
+                            <%
+                               }
+                            %>
+                        </table>
+                    </div>                  
                 </div>
             </div>
         </header>
