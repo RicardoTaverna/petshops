@@ -54,7 +54,7 @@
                     
                     <div class="col-8 jumbotron">
                         <form method="POST" action="AtualizarClienteController">
-                           <input hidden name="id" value="<%out.print(cliente.getString("clienteId"));%>">
+                           <input hidden name="id" value="<%out.print(id);%>">
                            
                             <div class="form-label-group">
                                 <input type="txt" id="inputNome" name="inputNome" class="form-control" placeholder="Nome" required value="<%out.print(cliente.getString("primeiro_nome"));%>">

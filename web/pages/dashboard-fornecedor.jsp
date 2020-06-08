@@ -7,6 +7,7 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="Model.Cliente"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<% String fornecedorId = ""; %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -48,14 +49,14 @@
                                         
                     ResultSet fornecedor = (ResultSet)session.getAttribute("usuarioLogado");       
                         while(fornecedor.next()){
-
+                        fornecedorId = fornecedor.getString("fornecedorId");
 
                     %> 
                     
                 <div class="jumbotron">
                     <h3 class="mb-3" >Dados Cadastrais</h3>
                     <form method="POST" action="AtualizarFornecedorController">
-                       <input hidden name="id" value="<%out.print(fornecedor.getString("fornecedorId"));%>">
+                       <input hidden name="id" value="<%out.print(fornecedorId);%>">
                        <div class="row">
                             
                             <div class="col-6 form-label-group mb-3">
@@ -126,7 +127,7 @@
                                 <td><%out.print(servico.getString("preco"));%></td>
                                 <td>
                                     <div class="row">
-                                        <form>
+                                        <form class="ml-3">
                                             <button class="btn btn-primary btn-sm" type="submit"><i class="far fa-edit"></i></button>
                                         </form>
                                         <form class="ml-3">
@@ -138,11 +139,18 @@
                               </tr>
                               
                             </tbody>
+                            <%%>
+                            
                             <%
+                                fornecedorId = servico.getString("fornecedorId");
                                }
                             %>
                         </table>
-                        <button class="btn btn-primary">Adicionar</button>
+                        <form method="POST" action="PaginaAdicionarServicoController">
+                            <input hidden name="fornecedorId" value="<%out.print(fornecedorId);%>" />
+                            <button class="btn btn-primary" type="submit">Adicionar</button>
+                        </form>
+                        
                     </div>     
                         
                 </div>
@@ -155,8 +163,7 @@
                     <!-- Footer Location-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="mb-4">LOCATION</h4>
-                        <p class="pre-wrap lead mb-0">2215 John Daniel Drive
-Clark, MO 65243</p>
+                        <p class="pre-wrap lead mb-0">2215 John Daniel Drive Clark, MO 65243</p>
                     </div>
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">

@@ -18,8 +18,9 @@ public class ServicosDAO {
 
     public void inserirServicos(Servicos servicos){
         try {
-            query = "INSERT INTO servicos(nome,preco,descricao,tempo_servico) "
-                    + "VALUES (" +"'"+ servicos.getNome() + "'," +  
+            query = "INSERT INTO servicos(fornecedorId,nome,preco,descricao,tempo_servico) "
+                    + "VALUES (" + servicos.getFornecedorId() + "," +
+                    "'"+ servicos.getNome() + "'," +  
                     servicos.getPreco()+ "," +
                     "'" + servicos.getDescricao() + "'," + 
                     "'" + servicos.getTempo_servico() + "')";

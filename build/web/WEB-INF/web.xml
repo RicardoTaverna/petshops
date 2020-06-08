@@ -32,6 +32,14 @@
         <servlet-name>AtualizarFornecedorController</servlet-name>
         <servlet-class>Controller.AtualizarFornecedorController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AdicionarServicoController</servlet-name>
+        <servlet-class>Controller.AdicionarServicoController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PaginaAdicionarServicoController</servlet-name>
+        <servlet-class>Controller.PaginaAdicionarServicoController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarClienteController</servlet-name>
         <url-pattern>/CadastrarClienteController</url-pattern>
@@ -63,6 +71,14 @@
     <servlet-mapping>
         <servlet-name>AtualizarFornecedorController</servlet-name>
         <url-pattern>/AtualizarFornecedorController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdicionarServicoController</servlet-name>
+        <url-pattern>/AdicionarServicoController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PaginaAdicionarServicoController</servlet-name>
+        <url-pattern>/PaginaAdicionarServicoController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

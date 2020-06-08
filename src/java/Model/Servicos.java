@@ -2,7 +2,7 @@ package Model;
 
 
 public class Servicos {
-    private Fornecedor fornecedor;
+    private int fornecedorId;
     private String nome;
     private Float preco;
     private String descricao;
@@ -10,21 +10,22 @@ public class Servicos {
     
     public Servicos(){}
 
-    public Servicos(Fornecedor fornecedor, String nome, Float preco, String descricao, String tempo_servico) {
-        this.fornecedor = fornecedor;
+    public Servicos(int fornecedorId, String nome, Float preco, String descricao, String tempo_servico) {
+        this.fornecedorId = fornecedorId;
         this.nome = nome;
         this.preco = preco;
         this.descricao = descricao;
         this.tempo_servico = tempo_servico;
     }
 
-    public Fornecedor getFornecedor() {
-        return fornecedor;
+    public int getFornecedorId() {
+        return fornecedorId;
     }
 
-    public void setFornecedor(Fornecedor fornecedor) {
-        this.fornecedor = fornecedor;
+    public void setFornecedorId(int fornecedorId) {
+        this.fornecedorId = fornecedorId;
     }
+
 
     public String getNome() {
         return nome;
