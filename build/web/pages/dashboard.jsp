@@ -45,8 +45,11 @@
                 <div class="row">
                     <!-- Detalhes do fornecedor -->
                     <%
+
                     ResultSet cliente = (ResultSet)session.getAttribute("usuarioLogado");       
                         while(cliente.next()){
+
+
                     %> 
                     
                     <div class="col-8 jumbotron">
@@ -54,28 +57,28 @@
                            <input hidden name="id" value="<%out.print(cliente.getString("clienteId"));%>">
                            
                             <div class="form-label-group">
-                                <input type="nome" id="inputNome" name="inputNome" class="form-control" placeholder="Nome" required value="<%out.print(cliente.getString("primeiro_nome"));%>">
+                                <input type="txt" id="inputNome" name="inputNome" class="form-control" placeholder="Nome" required value="<%out.print(cliente.getString("primeiro_nome"));%>">
                             </div>
                             <div class="form-label-group">
-                                <input type="sobrenome" id="inputSobrenome" name="inputSobrenome" class="form-control" placeholder="Sobrenome" required value="<%out.print(cliente.getString("sobrenome"));%>">
+                                <input type="txt" id="inputSobrenome" name="inputSobrenome" class="form-control" placeholder="Sobrenome" required value="<%out.print(cliente.getString("sobrenome"));%>">
                             </div>                            
                             <div class="form-label-group">
                                 <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email"  required value="<%out.print(cliente.getString("email"));%>">
                             </div>                            
                             <div class="form-label-group">
-                                <input type="senha" id="inputSenha" name="inputSenha" class="form-control" placeholder="Senha" required value="<%out.print(cliente.getString("senha"));%>">
+                                <input type="password" id="inputSenha" name="inputSenha" class="form-control" placeholder="Senha" required value="<%out.print(cliente.getString("senha"));%>">
                             </div>
                             <div class="form-label-group">
-                                <input type="senha" id="inputCep" name="inputCep" class="form-control" placeholder="CEP" required value="<%out.print(cliente.getString("cep"));%>">
+                                <input type="txt" id="inputCep" name="inputCep" class="form-control" placeholder="CEP" required value="<%out.print(cliente.getString("cep"));%>">
                             </div>                            
                             <div class="form-label-group">
-                                <input type="cidade" id="inputCidade" name="inputCidade" class="form-control" placeholder="Cidade" required value="<%out.print(cliente.getString("cidade"));%>">
+                                <input type="txt" id="inputCidade" name="inputCidade" class="form-control" placeholder="Cidade" required value="<%out.print(cliente.getString("cidade"));%>">
                             </div>
                             <div class="form-label-group">
-                                <input type="cpf" id="inputCpf" name="inputCpf" class="form-control" placeholder="CPF" required value="<%out.print(cliente.getString("cpf"));%>">
+                                <input type="txt" id="inputCpf" name="inputCpf" class="form-control" placeholder="CPF" required value="<%out.print(cliente.getString("cpf"));%>">
                             </div>
                             <div class="form-label-group">
-                                <input type="telefone" id="inputTelefone" name="inputTelefone" class="form-control" placeholder="Telefone" required value="<%out.print(cliente.getString("telefone"));%>">
+                                <input type="txt" id="inputTelefone" name="inputTelefone" class="form-control" placeholder="Telefone" required value="<%out.print(cliente.getString("telefone"));%>">
                             </div>
 
 

@@ -50,15 +50,16 @@ public class FornecedorDAO {
     
     public void editarFornecedor(int id, Fornecedor u){
         try{
-            query = "UPDATE fornecedor SET nome='" + u.getNome_fantasia()
-                    + ", cnpj='" + u.getCnpj() 
-                    + "' , cep='" + u.getCep() 
-                    + "' , cidade='" + u.getCidade() + "'"
-                    + ", horario_funcionamento='" + u.getHorario_funcionamento() 
-                    + "' , email='" + u.getEmail() 
-                    + "', telefone='" + u.getTelefone() + "'"
-                    + ", Telefone='" + u.getTelefone() + "' " +
-                        "WHERE id = " + id;
+            query = "UPDATE fornecedor SET "
+                    + "nome_fantasia='" + u.getNome_fantasia() +"',"
+                    + "cnpj='" + u.getCnpj() +"',"
+                    + "cep='" + u.getCep() +"',"
+                    + "cidade='" + u.getCidade() + "',"
+                    + "horario_funcionamento='" + u.getHorario_funcionamento()+ "',"
+                    + "email='" + u.getEmail()+ "'," 
+                    + "telefone='" + u.getTelefone() + "',"
+                    + "senha='" + u.getSenha() + "'" +
+                        "WHERE fornecedorId = " + id;
         
             statement = conexao.getConnection().prepareStatement(query);
             statement.executeUpdate();
@@ -93,6 +94,48 @@ public class FornecedorDAO {
 
         return resultSet;
     }
+        public boolean autenticaFornecedor(String email, String senha){
+        boolean retorno = false;
+        try{
+            
+            query = ("SELECT * FROM fornecedor WHERE email = '"+email +"' "
+                    + "and senha = '"+senha+"'");
+            statement = conexao.getConnection().prepareStatement(query);
+            statement.executeQuery();
+            
+            ResultSet rs;
+            rs = statement.executeQuery();
+            
+            
+            if(rs.next()){
+                retorno = true;
+                
+            }else{
+                retorno = false;}
+            
+        
+            }catch (SQLException e) {
+                e.printStackTrace();
+            }
+        return retorno;
+        
+    }
+    
+       public ResultSet perfilDashFornecedor(String email){
+        try{
+            query = ("SELECT * FROM fornecedor WHERE email = '"+email +"'");
+            statement = conexao.getConnection().prepareStatement(query);
+            statement.executeQuery();
+            
+            
+            resultSet = statement.executeQuery();
+ 
+        
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
     
     
+        return resultSet;
+    }
 }
