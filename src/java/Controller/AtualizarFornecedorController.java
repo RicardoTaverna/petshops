@@ -2,6 +2,7 @@ package Controller;
 
 import DAO.ClienteDAO;
 import DAO.FornecedorDAO;
+import DAO.ServicosDAO;
 import Model.Fornecedor;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,7 +15,7 @@ import javax.servlet.http.HttpSession;
 
 public class AtualizarFornecedorController extends HttpServlet {
  
-private ResultSet resultado;
+private ResultSet resultado, resultadoServico;
     private Fornecedor f;
     
     @Override
@@ -36,10 +37,13 @@ private ResultSet resultado;
         FornecedorDAO fornecedorDAO = new FornecedorDAO();
         fornecedorDAO.editarFornecedor(id_to_int,f);
         
+        ServicosDAO servicosDAO = new ServicosDAO();
+        resultadoServico = servicosDAO.listarServicos(id_to_int);
+        
         resultado = fornecedorDAO.perfilDashFornecedor(email);
         
         request.setAttribute("resultado", resultado);
-        
+        request.setAttribute("resultadoServico", resultadoServico);
         session.setAttribute("usuarioLogado", resultado);
         request.getRequestDispatcher("/pages/dashboard-fornecedor.jsp").forward(request, response);
     }

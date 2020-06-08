@@ -45,7 +45,7 @@
                 
                     <!-- Detalhes do fornecedor -->
                     <%
-
+                                        
                     ResultSet fornecedor = (ResultSet)session.getAttribute("usuarioLogado");       
                         while(fornecedor.next()){
 
@@ -59,28 +59,36 @@
                        <div class="row">
                             
                             <div class="col-6 form-label-group mb-3">
-                                <input type="text" id="inputNome" name="inputNomeFantasia" class="form-control" placeholder="Nome Fantasia" required value="<%out.print(fornecedor.getString("nome_fantasia"));%>">
+                                <label for="inputNomeFantasia" class="text-muted">Nome Fantasia</label>
+                                <input type="text" id="inputNomeFantasia" name="inputNomeFantasia" class="form-control" placeholder="Nome Fantasia" required value="<%out.print(fornecedor.getString("nome_fantasia"));%>">
                             </div>   
                             <div class="col-6 form-label-group mb-3">
-                                <input type="text" id="inputSobrenome" name="inputCnpj" class="form-control" placeholder="CNPJ" required value="<%out.print(fornecedor.getString("cnpj"));%>">
+                                <label for="inputCnpj" class="text-muted">CNPJ</label>
+                                <input type="text" id="inputCnpj" name="inputCnpj" class="form-control" placeholder="CNPJ" required value="<%out.print(fornecedor.getString("cnpj"));%>">
                             </div>  
                             <div class="col-6 form-label-group mb-3">
-                                <input type="text" id="inputEmail" name="inputCep" class="form-control" placeholder="CEP"  required value="<%out.print(fornecedor.getString("cep"));%>">
+                                <label for="inputCep" class="text-muted">CEP</label>
+                                <input type="text" id="inputCep" name="inputCep" class="form-control" placeholder="CEP"  required value="<%out.print(fornecedor.getString("cep"));%>">
                             </div>                            
                             <div class="col-6 form-label-group mb-3">
-                                <input type="text" id="inputSenha" name="inputCidade" class="form-control" placeholder="Cidade" required value="<%out.print(fornecedor.getString("cidade"));%>">
+                                <label for="inputCidade" class="text-muted">Cidade</label>
+                                <input type="text" id="inputCidade" name="inputCidade" class="form-control" placeholder="Cidade" required value="<%out.print(fornecedor.getString("cidade"));%>">
                             </div>
                             <div class="col-6 form-label-group mb-3">
-                                <input type="text" id="inputCep" name="inputHorario" class="form-control" placeholder="Horario-Funcionamento" required value="<%out.print(fornecedor.getString("horario_funcionamento"));%>">
+                                <label for="inputHorario" class="text-muted">Horário de Atendimento</label>
+                                <input type="text" id="inputHorario" name="inputHorario" class="form-control" placeholder="Horario-Funcionamento" required value="<%out.print(fornecedor.getString("horario_funcionamento"));%>">
                             </div>                            
                             <div class="col-6 form-label-group mb-3">
-                                <input type="email" id="inputCidade" name="inputEmail" class="form-control" placeholder="Email" required value="<%out.print(fornecedor.getString("email"));%>">
+                                <label for="inputEmail" class="text-muted">E-mail</label>
+                                <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email" required value="<%out.print(fornecedor.getString("email"));%>">
                             </div>
                             <div class="col-6 form-label-group mb-3">
-                                <input type="text" id="inputCpf" name="inputTelefone" class="form-control" placeholder="Telefone" required value="<%out.print(fornecedor.getString("telefone"));%>">
+                                <label for="inputTelefone" class="text-muted">Telefone</label>
+                                <input type="text" id="inputTelefone" name="inputTelefone" class="form-control" placeholder="Telefone" required value="<%out.print(fornecedor.getString("telefone"));%>">
                             </div>
                             <div class="col-6 form-label-group mb-3">
-                                <input type="password" id="inputTelefone" name="inputSenha" class="form-control" placeholder="Senha" required value="<%out.print(fornecedor.getString("senha"));%>">
+                                <label for="inputSenha" class="text-muted">Senha</label>
+                                <input type="password" id="inputSenha" name="inputSenha" class="form-control" placeholder="Senha" required value="<%out.print(fornecedor.getString("senha"));%>">
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Atualizar</button>
@@ -102,6 +110,7 @@
                                 <th scope="col">Descrição</th>
                                 <th scope="col">Tempo</th>
                                 <th scope="col">Preço</th>
+                                <th scope="col">Ação</th>
                               </tr>
                             </thead>
                             <%
@@ -115,6 +124,17 @@
                                 <td><%out.print(servico.getString("descricao"));%></td>
                                 <td><%out.print(servico.getString("tempo_servico"));%></td>
                                 <td><%out.print(servico.getString("preco"));%></td>
+                                <td>
+                                    <div class="row">
+                                        <form>
+                                            <button class="btn btn-primary btn-sm" type="submit"><i class="far fa-edit"></i></button>
+                                        </form>
+                                        <form class="ml-3">
+                                            <button class="btn btn-danger btn-sm" type="submit"><i class="fas fa-minus"></i></button>
+                                        </form>
+                                    </div>
+                                   
+                                </td>
                               </tr>
                               
                             </tbody>
@@ -122,7 +142,9 @@
                                }
                             %>
                         </table>
-                    </div>                  
+                        <button class="btn btn-primary">Adicionar</button>
+                    </div>     
+                        
                 </div>
             </div>
         </header>

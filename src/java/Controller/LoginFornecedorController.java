@@ -30,15 +30,23 @@ public class LoginFornecedorController extends HttpServlet {
         FornecedorDAO fornecedordao = new FornecedorDAO();
         resultado = fornecedordao.perfilDashFornecedor(email);
         
-        ServicosDAO servicosDAO = new ServicosDAO();
+        int fornecedorId = 0;
+        
         try {
-            resultadoServico = servicosDAO.listarServicos(resultado.getInt("fornecedorId"));
+            while (resultado.next()){
+                fornecedorId = resultado.getInt("fornecedorId");
+            }
         } catch (SQLException ex) {
             Logger.getLogger(LoginFornecedorController.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        resultado = fornecedordao.perfilDashFornecedor(email);
+        ServicosDAO servicosDAO = new ServicosDAO();
+        resultadoServico = servicosDAO.listarServicos(fornecedorId);
             
         if(fornecedordao.autenticaFornecedor(email,senha)){
             session.setAttribute("usuarioLogado", resultado);
+            request.setAttribute("resultado", resultado);
             request.setAttribute("resultadoServico", resultadoServico);
             request.getRequestDispatcher("/pages/dashboard-fornecedor.jsp").forward(request, response);
                  
