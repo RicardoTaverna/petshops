@@ -47,11 +47,12 @@ public class ServicosDAO {
     
     public void editarServicos(int id, Servicos u){
         try{
-            query = "UPDATE servicos SET nome='" + u.getNome() + "', preco='" + 
-                    u.getPreco() + "'"
-                    + ", descricao='" + u.getDescricao() + "' "
-                    + ", tempo_servico='" + u.getTempo_servico() + "' " +
-                        "WHERE id = " + id;
+            query = "UPDATE servicos SET "
+                    + "nome='" + u.getNome() + "', "
+                    + "preco='" + u.getPreco() + "',"
+                    + "descricao='" + u.getDescricao() + "',"
+                    + "tempo_servico='" + u.getTempo_servico() + "'" +
+                        "WHERE servicosId = " + id;
         
             statement = conexao.getConnection().prepareStatement(query);
             statement.executeUpdate();
