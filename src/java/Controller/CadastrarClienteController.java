@@ -32,7 +32,7 @@ public class CadastrarClienteController extends HttpServlet {
         ClienteDAO clienteDAO = new ClienteDAO();
         clienteDAO.inserirCliente(c);
 
-        request.getRequestDispatcher("index.html").forward(request, response);
+        request.getRequestDispatcher("pages/pagina-login.html").forward(request, response);
         
     }
 
