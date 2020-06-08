@@ -35,7 +35,7 @@ public class CadastrarFornecedorController extends HttpServlet {
         FornecedorDAO fornecedorDAO = new FornecedorDAO();
         fornecedorDAO.inserirFornecedor(f);
         
-        request.getRequestDispatcher("index.html").forward(request, response);
+        request.getRequestDispatcher("index.jsp").forward(request, response);
 
         
     }
