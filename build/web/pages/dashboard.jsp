@@ -52,36 +52,45 @@
 
                     %> 
                     
-                    <div class="col-8 jumbotron">
+                    <div class="jumbotron">
+                        <h3 class="mb-3" >Dados Cadastrais</h3>
                         <form method="POST" action="AtualizarClienteController">
                            <input hidden name="id" value="<%out.print(cliente.getString("clienteId"));%>">
-                           
-                            <div class="form-label-group">
-                                <input type="txt" id="inputNome" name="inputNome" class="form-control" placeholder="Nome" required value="<%out.print(cliente.getString("primeiro_nome"));%>">
-                            </div>
-                            <div class="form-label-group">
-                                <input type="txt" id="inputSobrenome" name="inputSobrenome" class="form-control" placeholder="Sobrenome" required value="<%out.print(cliente.getString("sobrenome"));%>">
-                            </div>                            
-                            <div class="form-label-group">
-                                <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email"  required value="<%out.print(cliente.getString("email"));%>">
-                            </div>                            
-                            <div class="form-label-group">
-                                <input type="password" id="inputSenha" name="inputSenha" class="form-control" placeholder="Senha" required value="<%out.print(cliente.getString("senha"));%>">
-                            </div>
-                            <div class="form-label-group">
-                                <input type="txt" id="inputCep" name="inputCep" class="form-control" placeholder="CEP" required value="<%out.print(cliente.getString("cep"));%>">
-                            </div>                            
-                            <div class="form-label-group">
-                                <input type="txt" id="inputCidade" name="inputCidade" class="form-control" placeholder="Cidade" required value="<%out.print(cliente.getString("cidade"));%>">
-                            </div>
-                            <div class="form-label-group">
-                                <input type="txt" id="inputCpf" name="inputCpf" class="form-control" placeholder="CPF" required value="<%out.print(cliente.getString("cpf"));%>">
-                            </div>
-                            <div class="form-label-group">
-                                <input type="txt" id="inputTelefone" name="inputTelefone" class="form-control" placeholder="Telefone" required value="<%out.print(cliente.getString("telefone"));%>">
-                            </div>
+                           <div class="row">
 
-
+                                <div class="col-6 form-label-group mb-3">
+                                    <label for="inputNome" class="text-muted">Primeiro Nome</label>
+                                    <input type="text" id="inputNome" name="inputNome" class="form-control" placeholder="Primeiro Nome" required value="<%out.print(cliente.getString("primeiro_nome"));%>">
+                                </div>   
+                                <div class="col-6 form-label-group mb-3">
+                                    <label for="inputSobrenome" class="text-muted">Sobrenome</label>
+                                    <input type="text" id="inputSobrenome" name="inputSobrenome" class="form-control" placeholder="Sobrenome" required value="<%out.print(cliente.getString("sobrenome"));%>">
+                                </div>  
+                                <div class="col-6 form-label-group mb-3">
+                                    <label for="inputEmail" class="text-muted">E-mail</label>
+                                    <input type="text" id="inputEmail" name="inputEmail" class="form-control" placeholder="E-mail"  required value="<%out.print(cliente.getString("email"));%>">
+                                </div>                            
+                                <div class="col-6 form-label-group mb-3">
+                                    <label for="inputSenha" class="text-muted">Senha</label>
+                                    <input type="password" id="inputSenha" name="inputSenha" class="form-control" placeholder="Senha" required value="<%out.print(cliente.getString("senha"));%>">
+                                </div>
+                                <div class="col-6 form-label-group mb-3">
+                                    <label for="inputCep" class="text-muted">CEP</label>
+                                    <input type="text" id="inputCep" name="inputCep" class="form-control" placeholder="CEP" required value="<%out.print(cliente.getString("cep"));%>">
+                                </div>                            
+                                <div class="col-6 form-label-group mb-3">
+                                    <label for="inputCidade" class="text-muted">Cidade</label>
+                                    <input type="txt" id="inputCidade" name="inputCidade" class="form-control" placeholder="Cidade" required value="<%out.print(cliente.getString("cidade"));%>">
+                                </div>
+                                <div class="col-6 form-label-group mb-3">
+                                    <label for="inputCpf" class="text-muted">CPF</label>
+                                    <input type="text" id="inputCpf" name="inputCpf" class="form-control" placeholder="CPF" required value="<%out.print(cliente.getString("cpf"));%>">
+                                </div>
+                                <div class="col-6 form-label-group mb-3">
+                                    <label for="inputTelefone" class="text-muted">Telefone</label>
+                                    <input type="txt" id="inputTelefone" name="inputTelefone" class="form-control" placeholder="Telefone" required value="<%out.print(cliente.getString("telefone"));%>">
+                                </div>
+                            </div>
                             <button type="submit" class="btn btn-primary">Atualizar</button>
                         </form>
                     </div>
